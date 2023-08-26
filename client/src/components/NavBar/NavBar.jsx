@@ -5,32 +5,48 @@ import '../../iconos/style.css';
 
 
 
-export default function NavBar(){
+export default function NavBar() {
 
-    const [ nav, setNav ] = useState(false)
+    const [nav, setNav] = useState(false)
+    const [displayIndumentaria, setDisplayIndumentaria] = useState(false);
 
-    const display = () => {
+    const displayNav = () => {
+        nav ? setNav(false) : setNav(true);
 
-     nav ? setNav(false) : setNav(true);
+    }
 
+    const displayInd = () => {
+
+        displayIndumentaria ? setDisplayIndumentaria(false) : setDisplayIndumentaria(true);
 
     }
 
 
 
-
-    return(
+    return (
         <div className={styles.nav}>
 
-            <span className={`icon-menu3 ${styles.display}`} onClick={display}/>
+            <span name='nav' className={`icon-menu3 ${styles.display}`} onClick={displayNav} />
+            <section className={styles.buttons}>
+                <button className={styles.login}>Ingresar</button>
 
+                <button className={styles.signup}>Registrarse</button>
+            </section>
 
             <div className={nav ? styles.routes : styles.hidden}>
-            <p className={styles.button}><span className='icon-home'></span> Home </p>
-            <p className={styles.button}> Indumentaria </p>
-            <p className={styles.button}> Accesorios </p>
-            <p className={styles.button}> About </p>
-            <p className={styles.button}> Contacto </p>
+                <p className={styles.button}><span className='icon-home'></span> Home </p>
+
+                <p className={styles.button} onClick={displayInd}><span className="icon-man-woman"></span> Indumentaria </p>
+                <p className={displayIndumentaria ? styles.button2 : styles.hidden}><span className="icon-woman"></span>Mujer</p>
+                <p className={displayIndumentaria ? styles.button2 : styles.hidden}><span className="icon-man"></span>Hombre</p>
+                <p className={displayIndumentaria ? styles.button2 : styles.hidden}><span className="icon-man-woman"></span> Kids</p>
+
+                <p className={styles.button}><span className='icon-bug'></span> Accesorios </p>
+
+                <p className={styles.button}><span className="icon-rocket"></span> About </p>
+
+                <p className={styles.button}><span className="icon-mail4"></span> Contacto </p>
+
             </div>
 
         </div>
