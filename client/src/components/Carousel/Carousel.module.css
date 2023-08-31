@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 .carousel{
 
     position: relative;
@@ -8,7 +10,18 @@
     border: solid grey 1.5px;
     border-radius: 20px;
 
-    background-color: #22222293;
+    /* background-color: #22222293; */
+
+    background-image: url('https://www.xtrafondos.com/wallpapers/resoluciones/20/colores-vibrantes_2560x1440_5313.jpg');
+    background-repeat: no-repeat;
+    
+    margin-bottom: 50px;
+    margin-top: 35px;
+    
+}
+
+.conteiner{
+    position: relative;
 }
 
 .img{
@@ -18,9 +31,38 @@
     margin-top: -5px;
 
     border-radius: 10px;
-    border:solid black 1px;
+    border:solid rgb(48, 54, 54) 1.5px;
+
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+    cursor: pointer;
 }
 
+.index{
+    position: absolute;
+    width: 82vw;
+    height: 10vh;
+
+    top: 0;
+    
+    transform: translateY(210%);
+
+    margin-left: 32px;
+    border-radius: 0px 0px 10px 10px;
+
+    background-color: rgb(3, 69, 95);
+}
+
+.p{
+    color:white;
+
+    font-size: large;
+
+    text-align: center;
+
+    font-family: 'Ubuntu';
+    font-weight: 700;
+}
 
 .prev{
 

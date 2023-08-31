@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from './NavBar.module.css';
 import '../../iconos/style.css';
-
+import { Link } from 'react-router-dom'
 
 
 
@@ -28,24 +28,28 @@ export default function NavBar() {
 
             <span name='nav' className={`icon-menu3 ${styles.display}`} onClick={displayNav} />
             <section className={styles.buttons}>
+                
+                <span className={`icon-cart ${styles.carrito_fav}`}></span>
+                <span className={`icon-heart ${styles.carrito_fav}`}></span>
                 <button className={styles.login}>Ingresar</button>
 
                 <button className={styles.signup}>Registrarse</button>
             </section>
 
             <div className={nav ? styles.routes : styles.hidden}>
-                <p className={styles.button}><span className='icon-home'></span> Home </p>
+               <Link to='/' style={{ textDecoration: 'none' }}> <p className={styles.button}><span className='icon-home'></span> Home </p></Link>
 
-                <p className={styles.button} onClick={displayInd}><span className="icon-man-woman"></span> Indumentaria </p>
-                <p className={displayIndumentaria ? styles.button2 : styles.hidden}><span className="icon-woman"></span>Mujer</p>
-                <p className={displayIndumentaria ? styles.button2 : styles.hidden}><span className="icon-man"></span>Hombre</p>
-                <p className={displayIndumentaria ? styles.button2 : styles.hidden}><span className="icon-man-woman"></span> Kids</p>
+                 <p className={styles.button} onClick={displayInd}><span className="icon-man-woman"></span> Indumentaria </p> 
+                 
+                 <Link to='/indumentaria/mujer/' style={{ textDecoration: 'none' }}><p className={displayIndumentaria ? styles.button2 : styles.hidden}><span className="icon-woman"></span>Mujer</p> </Link>
+                 
+                 <Link to='/indumentaria/kids/' style={{ textDecoration: 'none' }}><p className={displayIndumentaria ? styles.button2 : styles.hidden}><span className="icon-man-woman"></span> Kids</p> </Link>
 
-                <p className={styles.button}><span className='icon-bug'></span> Accesorios </p>
+                 <Link to='/accesorios' style={{ textDecoration: 'none' }}><p className={styles.button}><span className='icon-bug'></span> Accesorios </p> </Link>
 
-                <p className={styles.button}><span className="icon-rocket"></span> About </p>
+                 <Link to='/about' style={{ textDecoration: 'none' }}><p className={styles.button}><span className="icon-rocket"></span> About </p> </Link>
 
-                <p className={styles.button}><span className="icon-mail4"></span> Contacto </p>
+                 <Link to='/contact' style={{ textDecoration: 'none' }}><p className={styles.button}><span className="icon-mail4"></span> Contacto </p> </Link>
 
             </div>
 

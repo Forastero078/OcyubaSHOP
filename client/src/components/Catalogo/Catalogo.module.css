@@ -1,0 +1,32 @@
+.catalogo{
+    display: block;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+
+
+    margin-top: 70px;
+}
+
+
+.desliza{
+    
+
+	width: 100vw;
+	height: 20px;
+
+	padding: 2px;
+
+    margin-top: 45px;
+
+    margin-bottom: -70px;
+
+	background-color: rgb(124, 96, 2);
+	border-bottom: black;
+
+	font-family: 'Ubuntu';
+	font-size: 15px;
+
+	color:black;
+    
+}

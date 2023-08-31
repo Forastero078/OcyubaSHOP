@@ -15,6 +15,7 @@
     color: white;
 
     z-index: 9999;
+    top: 0;
 }
 
 .routes{
@@ -26,7 +27,7 @@
     background-color:rgba(0,0,0,0.5); 
 
     margin-top: 8px;
-    
+    padding-top: 10px;
 }
 
 .hidden{
@@ -35,19 +36,44 @@
 
 
 .button {
-    margin: 0px;
-    padding: 5px;
+    margin: 2px;
+    margin-top: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 
     font-size: 20px;
+
+    text-decoration: none;
+
+    color: white;
+
+    
+} 
+button:focus, button:hover, button:visited, button:link, button:active {
+    text-decoration: none;
 }
 
+.button2 {
+    margin: 2px;
+    margin-top: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+    font-size: 15px;
+
+    text-decoration: none;
+
+    color: white;
+
+    
+} 
 
 .display{
     font-size: 35px;
 
    
 
-   margin-right: 250px;
+    margin-right: 80%;
 
    
 
@@ -58,10 +84,15 @@
 .buttons{
     position: absolute;
 
-    margin-left: 100px;
+    margin-left: 18%;
     margin-top: -30px;
 
     
+}
+
+.carrito_fav{
+    padding: 10px;
+    font-size: 20px;
 }
 
 .login{
